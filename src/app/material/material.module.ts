@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatBadgeModule } from '@angular/material/badge';
-import {MatIconModule} from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 const MaterialComponents = [
-  MatBadgeModule,
-  MatIconModule
+  MatProgressSpinnerModule
 ];
 
 @NgModule({
