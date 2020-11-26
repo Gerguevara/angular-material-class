@@ -1,17 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'my-app',
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'Material-Tutorial';
+  collapsedNav: boolean;
+  mobileQuery: MediaQueryList;
 
+  private _mobileQueryListener: () => void;
 
-  hidden = false;
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this._mobileQueryListener);
+  }
 
-  toggleBadgeVisibility() {
-    this.hidden = !this.hidden;
+  ngOnDestroy(): void {
+    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 }

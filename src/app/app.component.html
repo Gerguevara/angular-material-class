@@ -1,48 +1,35 @@
-
-<mat-toolbar color="warn">
-  <span>My Application</span>
-</mat-toolbar>
-<br>
-<br>
-<br>
-<br>
-<br>
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span>My App</span>
-      <span class="example-spacer">
-
-      </span>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+<mat-drawer-container>
+	<mat-drawer #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="!mobileQuery.matches" [ngClass]="{'sidenav-collapsed': collapsedNav && !mobileQuery.matches}">
+		<div class="sidenav-header">
+			<span>{{collapsedNav && !mobileQuery.matches ? 'S' : 'SideNav'}}</span>
+		</div>
+		<ul>
+			<li>
+				<mat-icon>home</mat-icon>
+			</li>
+			<li>
+				<mat-icon>exit_to_app</mat-icon>
+			</li>
+		</ul>
+	</mat-drawer>
+	<mat-drawer-content [ngClass]="{'sidenav-collapsed': collapsedNav && !mobileQuery.matches}">
+		<mat-toolbar>
+			<!-- <button mat-icon-button (click)="snav.toggle()"> -->
+			<button mat-icon-button (click)="mobileQuery.matches ? snav.toggle() : collapsedNav = !collapsedNav">
         <mat-icon>menu</mat-icon>
       </button>
-</mat-toolbar-row>
-</mat-toolbar>
+		</mat-toolbar>
+		<mat-card>
+			<mat-card-header>
+				<mat-card-title>Home</mat-card-title>
+				<mat-card-subtitle>Example of a home screen</mat-card-subtitle>
+			</mat-card-header>
+			<mat-card-content>
 
-<br>
-<br>
-<br>
-<br>
-
-
-  <mat-toolbar color="warn">
-    <mat-toolbar-row>
-      <span>My App</span>
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </mat-toolbar-row>
-
-    <mat-toolbar-row>
-      <span>Second Line</span>
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button>
-    </mat-toolbar-row>
-  </mat-toolbar>
-
+			</mat-card-content>
+			<mat-card-actions>
+				<button mat-button>Ok</button>
+			</mat-card-actions>
+		</mat-card>
+	</mat-drawer-content>
+</mat-drawer-container>
