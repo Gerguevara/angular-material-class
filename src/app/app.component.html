@@ -1,35 +1,6 @@
-<div class="example-button-row">
-  <mat-button-toggle-group name="fontStyle" aria-label="Font Style" >
-    <mat-button-toggle value="bold">Bold</mat-button-toggle>
-    <mat-button-toggle value="italic">Italic</mat-button-toggle>
-    <mat-button-toggle value="underline">Underline</mat-button-toggle>
-  </mat-button-toggle-group>
+
+<div>
+  <mat-icon aria-hidden="false" aria-label="Example home icon" color="primary">home</mat-icon>
+
+
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<hr>
-<mat-button-toggle #togglebnt checked>
-  Change Value
-</mat-button-toggle>
-Value:{{togglebnt.checked}}
-<br>
-<br>
-<br>
-<div *ngIf="togglebnt.checked">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vero placeat ut id numquam ipsa laboriosam! Natus eligendi vero expedita at? Provident quo fuga qui earum est illo nihil perferendis?
-</div>
-<br>
-<br>
-<br>
-<br>
-<hr>
-<div class="example-button-row">
-  <mat-button-toggle-group name="fontStyle" aria-label="Font Style"  #toogleGroup="matButtonToggleGroup" multiple>
-    <mat-button-toggle value="Angular">Angular</mat-button-toggle>
-    <mat-button-toggle value="React">React</mat-button-toggle>
-    <mat-button-toggle value="vue">vue</mat-button-toggle>
-  </mat-button-toggle-group>
-current value: {{toogleGroup.value}}
