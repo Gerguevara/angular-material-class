@@ -1,50 +1,35 @@
-Sin fondo solo texto
 <div class="example-button-row">
-    <button mat-button>Basic</button>
-    <button mat-button color="primary">Primary</button>
-    <button mat-button color="accent">Accent</button>
-    <button mat-button color="warn">Warn</button>
-    <button mat-button disabled>Disabled</button>
-    <a mat-button href="https://www.google.com/" target="_blank">Link</a>
-  </div>
-<br>
-<br>
-<br>
-  <hr>
-
-Con fondo
-<div class="example-button-row">
-  <button mat-raised-button>Basic</button>
-  <button mat-raised-button color="primary">Primary</button>
-  <button mat-raised-button color="accent">Accent</button>
-  <button mat-raised-button color="warn">Warn</button>
-  <button mat-raised-button disabled>Disabled</button>
-  <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style" >
+    <mat-button-toggle value="bold">Bold</mat-button-toggle>
+    <mat-button-toggle value="italic">Italic</mat-button-toggle>
+    <mat-button-toggle value="underline">Underline</mat-button-toggle>
+  </mat-button-toggle-group>
 </div>
+<br>
+<br>
 <br>
 <br>
 <br>
 <hr>
-Botones con solo el texto de color
-<div class="example-button-row">
-  <button mat-stroked-button>Basic</button>
-  <button mat-stroked-button color="primary">Primary</button>
-  <button mat-stroked-button color="accent">Accent</button>
-  <button mat-stroked-button color="warn">Warn</button>
-  <button mat-stroked-button disabled>Disabled</button>
-  <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+<mat-button-toggle #togglebnt checked>
+  Change Value
+</mat-button-toggle>
+Value:{{togglebnt.checked}}
+<br>
+<br>
+<br>
+<div *ngIf="togglebnt.checked">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vero placeat ut id numquam ipsa laboriosam! Natus eligendi vero expedita at? Provident quo fuga qui earum est illo nihil perferendis?
 </div>
+<br>
 <br>
 <br>
 <br>
 <hr>
-Botones Flat
 <div class="example-button-row">
-  <button mat-flat-button >Basic Ripple</button>
-  <button mat-flat-button disableRipple color="primary">Primary</button>
-  <button mat-flat-button color="accent">Accent</button>
-  <button mat-flat-button color="warn">Warn</button>
-  <button mat-flat-button disabled>Disabled</button>
-  <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
-</div>
-
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style"  #toogleGroup="matButtonToggleGroup" multiple>
+    <mat-button-toggle value="Angular">Angular</mat-button-toggle>
+    <mat-button-toggle value="React">React</mat-button-toggle>
+    <mat-button-toggle value="vue">vue</mat-button-toggle>
+  </mat-button-toggle-group>
+current value: {{toogleGroup.value}}
