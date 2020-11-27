@@ -19,13 +19,13 @@ mat-list{
 }
 
 
-.contend{
-  margin-top: 2%;
-  margin-left : 5%;
-  margin-right: auto;
-}
+
 
 .list-item{
   align-self: center;
 }
 
+
+mat-grid-tile{
+  background-color: gray;
+}
