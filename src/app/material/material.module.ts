@@ -1,38 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatCardModule } from '@angular/material/card';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 const MaterialComponents = [
-  MatToolbarModule,
-  MatIconModule,
-  MatButtonModule,
-  MatSidenavModule,
-  MatCardModule
+  MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule
 ];
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    MaterialComponents,
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
+    MaterialComponents
   ],
   exports: [
-    MaterialComponents,
-    CommonModule,
-    MaterialComponents,
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-  ]
+    MaterialComponents
+    ]
 })
 export class MaterialModule { }
