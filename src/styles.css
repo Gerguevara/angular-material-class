@@ -10,10 +10,22 @@ mat-drawer-container{
 }
 
 mat-drawer{
-  width: 15%;
+  width: 20%;
 }
 
 mat-list{
   display:flex;
   justify-content: center;
 }
+
+
+.contend{
+  margin-top: 2%;
+  margin-left : 5%;
+  margin-right: auto;
+}
+
+.list-item{
+  align-self: center;
+}
+

@@ -1,20 +1,3 @@
-<!-- main container -->
-<mat-drawer-container class="example-container">
-
-  <!-- Lista Contenido -->
-  <mat-drawer mode="side" [opened]="openend" #drawer>
-
-      <mat-list>
-      <mat-list-item> Pepper  </mat-list-item>
-      <mat-list-item> Salt </mat-list-item>
-      <mat-list-item> Paprika </mat-list-item>
-    </mat-list>
-  </mat-drawer>
-  <!-- Lista Contenido -->
-
-  <!-- contenido -->
-  <mat-drawer-content>
-
     <!-- toolbar -->
     <mat-toolbar color="primary">
       <button mat-icon-button class="example-icon" aria-label="menu icon" (click)="openend =!openend">
@@ -22,13 +5,43 @@
       </button>
 
       <span>My App</span>
-      <span class="example-spacer"></span>
+
+      <span>
+        <button mat-button [matMenuTriggerFor]="menu">Profile</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Option 1</button>
+          <button mat-menu-item>Option 2</button>
+        </mat-menu>
+      </span>
     </mat-toolbar>
-<!-- toolbar -->
-    <div>
+    <!-- toolbar -->
+
+<!-- main container -->
+<mat-drawer-container class="example-container">
+
+  <!-- Lista Contenido -->
+  <mat-drawer mode="side" [opened]="openend" #drawer>
+    <mat-nav-list >
+      <a mat-list-item href="#" class="list-item">Link 1</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="#" class="list-item">Link 2</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="#" class="list-item">Link 2</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="#" class="list-item">Link 2</a>
+   </mat-nav-list>
+
+  </mat-drawer>
+  <!-- Lista Contenido -->
+
+  <!-- contenido -->
+  <mat-drawer-content>
+
+
+    <main class="contend">
       Contend mus be here
       <button mat-raised-button color="primary" (click)="drawer.toggle()">Open / close</button>
-    </div>
+    </main>
 
 
   </mat-drawer-content>
