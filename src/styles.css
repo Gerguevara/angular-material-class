@@ -32,6 +32,12 @@ mat-grid-tile{
 
 
 .contend{
-  background-color: wheat;
   height: 100%;
+  width: 100%;
+}
+
+
+.contend>mat-card{
+  margin: 3%;
+  height: auto;
 }
