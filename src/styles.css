@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+width: 100%;
+height: 100%;
+
+}
 
 
 mat-drawer-container{
@@ -9,8 +13,16 @@ mat-drawer-container{
   height: 100%;
 }
 
-mat-drawer{
-  width: 20%;
+.mat-drawer{
+  background: wheat;
+  width: 15%;
+}
+
+
+@media only screen and (max-width: 640px) {
+  .mat-drawer{
+    width: 50%;
+  }
 }
 
 mat-list{
@@ -36,10 +48,12 @@ mat-grid-tile{
   width: 100%;
 }
 
-mat-tab{
-  height: 300px;
+.mat-stepper-horizontal {
+  margin-top: 20px;
 }
 
-.example-tab-icon {
-  margin-right: 8px;
+.mat-form-field {
+  padding: 2% ;
+  margin-top: 16px;
+  width: 90%;
 }
