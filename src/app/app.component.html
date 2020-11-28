@@ -37,48 +37,29 @@
   <!-- contenido -->
   <mat-drawer-content>
     <!-- content should be here -->
+    <main class="container">
 
 
-      <!-- steper -->
-      <mat-vertical-stepper linear=true #stepper>
-        <mat-step [stepControl]="firstFormGroup" completed=false>
-          <form [formGroup]="firstFormGroup" class="firstForm">
-            <ng-template matStepLabel>Fill out your name</ng-template>
-            <mat-form-field>
-              <mat-label>Name</mat-label>
-              <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-            </mat-form-field>
-            <div>
-              <button mat-button matStepperNext>Next</button>
-            </div>
-          </form>
-        </mat-step>
+      <mat-card>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Favorite food</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="Sushi">
+          </mat-form-field>
 
-        <mat-step [stepControl]="secondFormGroup" label="Fill out your address" completed=false optional>
-          <form [formGroup]="secondFormGroup">
-            <mat-form-field>
-              <mat-label>Address</mat-label>
-              <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                     required>
-            </mat-form-field>
-            <div>
-              <button mat-button matStepperPrevious>Back</button>
-              <button mat-button matStepperNext>Next</button>
-            </div>
-          </form>
-        </mat-step>
+          <mat-form-field class="example-full-width">
+            <mat-label>Leave a comment</mat-label>
+            <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+          </mat-form-field>
+        </form>
 
-        <mat-step completed=false >
-          <ng-template matStepLabel>Done</ng-template>
-          <p>You are now done.</p>
-          <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button (click)="stepper.reset()">Reset</button>
-          </div>
-        </mat-step>
-      </mat-vertical-stepper>
-      <!-- steper -->
+      </mat-card>
 
+
+
+
+   </main>
+     <!-- content should be here -->
   </mat-drawer-content>
   <!-- contenido -->
 

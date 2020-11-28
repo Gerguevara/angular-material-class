@@ -10,9 +10,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatStepperModule } from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+
 const MaterialComponents = [
   MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule, MatMenuModule
-  ,MatDividerModule, MatStepperModule, MatFormFieldModule, MatInputModule
+  ,MatDividerModule, MatStepperModule, MatFormFieldModule, MatInputModule, MatCardModule
 ];
 
 @NgModule({
