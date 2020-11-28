@@ -12,10 +12,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
+import {MatAutocompleteModule} from '@angular/material/autocomplete'
 
 const MaterialComponents = [
   MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule, MatMenuModule
-  ,MatDividerModule, MatStepperModule, MatFormFieldModule, MatInputModule, MatCardModule, MatSelectModule
+  , MatDividerModule, MatStepperModule, MatFormFieldModule, MatInputModule, MatCardModule, MatSelectModule,
+  MatAutocompleteModule
 ];
 
 @NgModule({
