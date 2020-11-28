@@ -36,8 +36,10 @@ mat-grid-tile{
   width: 100%;
 }
 
+mat-tab{
+  height: 300px;
+}
 
-.contend>mat-card{
-  margin: 3%;
-  height: auto;
+.example-tab-icon {
+  margin-right: 8px;
 }

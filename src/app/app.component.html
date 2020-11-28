@@ -37,18 +37,41 @@
   <!-- contenido -->
   <mat-drawer-content>
     <!-- content should be here -->
-    <main class="contend" color="primary">
-      <mat-card>
-        <mat-card-title>
-          Hello Im a card
-        </mat-card-title>
-
-        <mat-card-content>
-          Hello Im the content
-        </mat-card-content>
+    <main class="contend" >
 
 
-      </mat-card>
+      <mat-tab-group #tabRef color="warn" >
+        <mat-tab>
+          <ng-template mat-tab-label >
+            <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+            First
+          </ng-template>
+          Content 1
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+            Second
+          </ng-template>
+          Content 2
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon">thumb_up</mat-icon>
+            Third
+          </ng-template>
+
+          Content 3
+        </mat-tab>
+      </mat-tab-group>
+
+
+      {{tabRef.selectedIndex}}
+
+
+
 
     </main>
   </mat-drawer-content>
