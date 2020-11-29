@@ -2,11 +2,9 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-width: 100%;
-height: 100%;
+
 
 }
-
 
 
 mat-drawer-container{
@@ -18,11 +16,6 @@ mat-drawer-container{
   background: wheat;
   width: 15%;
 }
-
-.container{
-  color: cyan;
-  padding: 2%;
-  }
 
 
 @media only screen and (max-width: 640px) {
@@ -36,9 +29,6 @@ mat-list{
   justify-content: center;
 }
 
-
-
-
 .list-item{
   align-self: center;
 }
@@ -46,25 +36,4 @@ mat-list{
 
 mat-grid-tile{
   background-color: gray;
-}
-
-
-.contend{
-  height: 100%;
-  width: 100%;
-}
-
-.mat-stepper-horizontal {
-  margin-top: 20px;
-}
-
-.mat-form-field {
-  padding: 2% ;
-  margin-top: 16px;
-  width: 90%;
-}
-
-
-mat-form-field {
-  margin-right: 12px;
 }

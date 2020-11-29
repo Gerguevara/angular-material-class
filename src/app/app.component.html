@@ -22,7 +22,9 @@
   <!-- Lista Contenido -->
   <mat-drawer mode="side" [opened]="openend" #drawer>
     <mat-nav-list>
-      <a mat-list-item href="#" class="list-item">Link 1</a>
+      <div>
+        <a mat-list-item href="#" class="list-item pl-5">Link 1</a>
+      </div>
       <mat-divider></mat-divider>
       <a mat-list-item href="#" class="list-item">Link 2</a>
       <mat-divider></mat-divider>
@@ -38,9 +40,14 @@
   <mat-drawer-content>
     <!-- content should be here -->
     <main class="container">
-           <button mat-stroked-button (click)="openSnackBar('Hello', 'there')">Show snack-bar</button>
-
-           <button mat-button (click)="openCustonSnackBar('Hello', 'there')">Show custon snack-bar</button>
+      <div class="row mt-5">
+          <div class="col col-md-6">
+            <button mat-stroked-button (click)="openSnackBar('Hello', 'there')">Show snack-bar</button>
+          </div>
+          <div class="col col-md-6">
+            <button mat-button (click)="openCustonSnackBar()">Show custon snack-bar</button>
+          </div>
+      </div>
     </main>
     <!-- content should be here -->
   </mat-drawer-content>
