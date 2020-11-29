@@ -6,9 +6,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Angular Material Components
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OtherComponent } from './components/other/other.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OtherComponent
   ],
   imports: [
     BrowserModule,

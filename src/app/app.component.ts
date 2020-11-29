@@ -1,7 +1,6 @@
+import { OtherComponent } from './components/other/other.component';
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { Observable } from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 interface Food {
   value: string;
@@ -19,22 +18,29 @@ export class AppComponent {
   openend = false;
   isLinear = false;
 
-  myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
-  filteredOptions: Observable<string[]>;
+  constructor(private snackBar: MatSnackBar) { }
 
-  ngOnInit() {
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value))
-    );
+  openSnackBar(message: string, action: string): void {
+    const snackBarRef = this.snackBar.open(message, action, { duration: 2000, }); // se crea una referencia
+
+    snackBarRef.afterDismissed().subscribe(() => { // nos subscribimos a este evento que el evento default
+      console.log('stacbar was dismmis');
+    })
+
+    //pero asi mismo existe un observable solo para el action
+
+    snackBarRef.onAction().subscribe(() => { // nos subscribimos a este evento que el evento default
+      console.log('stacbar was triggered');
+    });
+    // ambos hacen casi lo mismo
   }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
 
-    return this.options.filter(option => option.toLowerCase().indexOf(filterValue) === 0);
+  openCustonSnackBar(){
+    this.snackBar.openFromComponent(OtherComponent, { duration: 2000 });
   }
+
+
 
 
 

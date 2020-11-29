@@ -38,35 +38,9 @@
   <mat-drawer-content>
     <!-- content should be here -->
     <main class="container">
+           <button mat-stroked-button (click)="openSnackBar('Hello', 'there')">Show snack-bar</button>
 
-      <form class="example-form">
-
-
-        <mat-form-field class="example-full-width">
-          <input type="text"
-                 placeholder="Pick one"
-                 aria-label="Number"
-                 matInput
-                 [formControl]="myControl"
-                 [matAutocomplete]="auto">
-          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-              {{option}}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-
-        <mat-form-field appearance="fill">
-          <mat-label>Choose a date</mat-label>
-          <input matInput [matDatepicker]="picker">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-
-
-      </form>
-
-
+           <button mat-button (click)="openCustonSnackBar('Hello', 'there')">Show custon snack-bar</button>
     </main>
     <!-- content should be here -->
   </mat-drawer-content>
