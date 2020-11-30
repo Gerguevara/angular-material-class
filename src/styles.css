@@ -14,13 +14,19 @@ mat-drawer-container{
 }
 .mat-drawer{
   background: wheat;
-  width: 15%;
+  width: 50%;
+}
+
+@media only screen and (min-width: 652px) {
+  .mat-drawer{
+    width: 40%;
+  }
 }
 
 
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 1025px) {
   .mat-drawer{
-    width: 50%;
+    width: 15%;
   }
 }
 
@@ -37,3 +43,11 @@ mat-list{
 mat-grid-tile{
   background-color: gray;
 }
+
+
+.container{
+  border: solid cyan;
+  background-color: white;
+  height: 100%;
+}
+

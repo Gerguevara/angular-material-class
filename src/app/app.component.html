@@ -22,15 +22,14 @@
   <!-- Lista Contenido -->
   <mat-drawer mode="side" [opened]="openend" #drawer>
     <mat-nav-list>
-      <div>
-        <a mat-list-item href="#" class="list-item pl-5">Link 1</a>
-      </div>
+
+      <a mat-list-item href="#" class="list-item d-flex justify-content-center">Link 1</a>
       <mat-divider></mat-divider>
-      <a mat-list-item href="#" class="list-item">Link 2</a>
+      <a mat-list-item href="#" class="list-item d-flex justify-content-center">Link 2</a>
       <mat-divider></mat-divider>
-      <a mat-list-item href="#" class="list-item">Link 2</a>
+      <a mat-list-item href="#"class="list-item d-flex justify-content-center">Link 2</a>
       <mat-divider></mat-divider>
-      <a mat-list-item href="#" class="list-item">Link 2</a>
+      <a mat-list-item href="#" class="list-item d-flex justify-content-center">Link 2</a>
     </mat-nav-list>
 
   </mat-drawer>
@@ -39,14 +38,14 @@
   <!-- contenido -->
   <mat-drawer-content>
     <!-- content should be here -->
-    <main class="container">
+    <main class="container mt-3">
       <div class="row mt-5">
-          <div class="col col-md-6">
-            <button mat-stroked-button (click)="openSnackBar('Hello', 'there')">Show snack-bar</button>
-          </div>
-          <div class="col col-md-6">
-            <button mat-button (click)="openCustonSnackBar()">Show custon snack-bar</button>
-          </div>
+        <div class="col col-md-6">
+          <button mat-stroked-button (click)="openSnackBar('Hello', 'there')">Show snack-bar</button>
+        </div>
+        <div class="col col-md-6">
+          <button mat-button (click)="openCustonSnackBar()">Show custon snack-bar</button>
+        </div>
       </div>
     </main>
     <!-- content should be here -->
