@@ -16,11 +16,11 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
 const MaterialComponents = [
   MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule, MatMenuModule
   , MatDividerModule, MatStepperModule, MatFormFieldModule, MatInputModule, MatCardModule, MatSelectModule,
-  MatAutocompleteModule, MatRadioModule, MatDatepickerModule, MatTooltipModule, MatSnackBarModule
+  MatAutocompleteModule, MatRadioModule, MatDatepickerModule, MatTooltipModule,MatDialogModule
 ];
 
 @NgModule({

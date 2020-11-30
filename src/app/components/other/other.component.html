@@ -1,2 +1,15 @@
-<h1>Hey soy uin title</h1>
-<span style="color:orange">Hey soy el custon component</span>
+<ng-container>
+  <h3 mat-dialog-title>Session TimeOut</h3>
+  <mat-dialog-content>{{data.name}} You will be taked out cuz you are idiot</mat-dialog-content>
+  <mat-dialog-actions  class="d-flex justify-content-center">
+
+      <button mat-button mat-dialog-close mat-dialog-close='Keep'>Keep me logged Im no idiot</button>
+      <button mat-button mat-dialog-close mat-dialog-close='close'>whatever</button>
+      <button  mat-button color="accent" (click)="close()">Custon close</button>
+
+  <!-- la directiva mat-dialog-close obeviamente cierra el modal  -->
+  </mat-dialog-actions>
+</ng-container>
+
+
+

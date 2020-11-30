@@ -1,12 +1,12 @@
 import { OtherComponent } from './components/other/other.component';
 import { Component } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { Observable } from 'rxjs';
 
-interface Food {
-  value: string;
-  viewValue: string;
+export interface DialogData {
+  animal: string;
+  name: string;
 }
-
 
 @Component({
   selector: 'app-root',
@@ -15,34 +15,20 @@ interface Food {
 })
 export class AppComponent {
   title = 'Material-Tutorial';
-  openend = false;
+  openend = false; // por el sidebar
   isLinear = false;
 
-  constructor(private snackBar: MatSnackBar) { }
+  constructor(public dialog: MatDialog) { }
 
-  openSnackBar(message: string, action: string): void {
-    const snackBarRef = this.snackBar.open(message, action, { duration: 2000, }); // se crea una referencia
-
-    snackBarRef.afterDismissed().subscribe(() => { // nos subscribimos a este evento que el evento default
-      console.log('stacbar was dismmis');
-    })
-
-    //pero asi mismo existe un observable solo para el action
-
-    snackBarRef.onAction().subscribe(() => { // nos subscribimos a este evento que el evento default
-      console.log('stacbar was triggered');
+  openDialog(): void {
+    const dialogRef = this.dialog.open(OtherComponent, {
+      width: '550px',
+    data: {name: 'Gerado'}
     });
-    // ambos hacen casi lo mismo
+    dialogRef.afterClosed().subscribe(result => { // nop subscribimos a su evento close
+      console.log('The dialog was closed:', result); // el result viene de la etiqueta creada
+    });
   }
-
-
-  openCustonSnackBar(){
-    this.snackBar.openFromComponent(OtherComponent, { duration: 2000 });
-  }
-
-
-
-
 
 
 }
