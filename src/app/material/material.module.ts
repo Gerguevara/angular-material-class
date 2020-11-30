@@ -10,17 +10,11 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatStepperModule } from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatCardModule } from '@angular/material/card';
-import {MatSelectModule} from '@angular/material/select';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatTableModule} from '@angular/material/table';
+
 const MaterialComponents = [
   MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule, MatMenuModule
-  , MatDividerModule, MatStepperModule, MatFormFieldModule, MatInputModule, MatCardModule, MatSelectModule,
-  MatAutocompleteModule, MatRadioModule, MatDatepickerModule, MatTooltipModule,MatDialogModule
+  , MatDividerModule, MatStepperModule, MatFormFieldModule, MatInputModule, MatTableModule
 ];
 
 @NgModule({

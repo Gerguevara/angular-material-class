@@ -1,7 +1,18 @@
-import { OtherComponent } from './components/other/other.component';
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { Observable } from 'rxjs';
+
+// interface para tipo de datos (opcional) pero buena practica
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  weight: number;
+  symbol: string;
+}
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
+  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
+];
 
 export interface DialogData {
   animal: string;
@@ -16,19 +27,8 @@ export interface DialogData {
 export class AppComponent {
   title = 'Material-Tutorial';
   openend = false; // por el sidebar
-  isLinear = false;
-
-  constructor(public dialog: MatDialog) { }
-
-  openDialog(): void {
-    const dialogRef = this.dialog.open(OtherComponent, {
-      width: '550px',
-    data: {name: 'Gerado'}
-    });
-    dialogRef.afterClosed().subscribe(result => { // nop subscribimos a su evento close
-      console.log('The dialog was closed:', result); // el result viene de la etiqueta creada
-    });
-  }
-
+  constructor() { }
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol']; // cabecera
+  dataSource = ELEMENT_DATA; // toma la data de este array que debe coinciir
 
 }
