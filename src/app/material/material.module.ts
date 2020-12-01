@@ -12,12 +12,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
-import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 const MaterialComponents = [
   MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule, MatMenuModule
   ,MatDividerModule, MatStepperModule, MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule,
-  MatPaginatorModule
+  MatPaginatorModule, ScrollingModule
 ];
 
 @NgModule({
