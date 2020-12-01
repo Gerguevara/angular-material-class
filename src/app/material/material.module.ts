@@ -12,10 +12,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 const MaterialComponents = [
   MatSidenavModule, MatToolbarModule, MatListModule, MatIconModule, MatButtonModule, MatMenuModule
-  , MatDividerModule, MatStepperModule, MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule
+  ,MatDividerModule, MatStepperModule, MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule,
+  MatPaginatorModule
 ];
 
 @NgModule({
