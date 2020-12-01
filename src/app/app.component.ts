@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import {MatSort} from '@angular/material/sort';
 
 // interface para tipo de datos (opcional) pero buena practica
 export interface PeriodicElement {
@@ -24,11 +26,31 @@ export interface DialogData {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+
+  @ViewChild(MatSort) sort: MatSort;
+
   title = 'Material-Tutorial';
   openend = false; // por el sidebar
   constructor() { }
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol']; // cabecera
-  dataSource = ELEMENT_DATA; // toma la data de este array que debe coinciir
+  dataSource = new MatTableDataSource(ELEMENT_DATA); // toma la data de este array que debe coinciir
 
+
+
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
+  }
+
+// metodo para filtar
+  applyFilter(filterText: string): void {
+    this.dataSource.filter = filterText.trim().toLocaleLowerCase();
+  }
 }
+
+/**
+ *  nota:
+ * si no se despliega un cabecera tambopo de mostrara la columa
+ * se debe respetar el ordern
+ * se pueden implmentar eventos con el ng click en un row
+ */
